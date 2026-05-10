@@ -24,7 +24,8 @@ export type ModalId =
   | "ShareTestSettings"
   | "CustomWordAmount"
   | "MobileTestConfig"
-  | "EditProfile";
+  | "EditProfile"
+  | "ForgotPassword";
 
 export type ModalVisibility = {
   visible: boolean;

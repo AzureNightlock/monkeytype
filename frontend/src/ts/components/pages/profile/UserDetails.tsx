@@ -36,7 +36,6 @@ import { Button } from "../../common/Button";
 import { DiscordAvatar } from "../../common/DiscordAvatar";
 import { UserBadge } from "../../common/UserBadge";
 import { UserFlags } from "../../common/UserFlags";
-import { EditProfile } from "../../popups/EditProfile";
 
 type Variant = "basic" | "hasSocials" | "hasBioOrKeyboard" | "full";
 
@@ -99,9 +98,6 @@ export function UserDetails(props: {
           isAccountPage={props.isAccountPage}
         />
       </div>
-      <Show when={props.isAccountPage === true}>
-        <EditProfile />
-      </Show>
     </div>
   );
 }

@@ -7,12 +7,12 @@ import {
   signInWithGitHub,
   signInWithGoogle,
 } from "../../../auth";
-import * as ForgotPasswordModal from "../../../modals/forgot-password";
 import {
   disableLoginPageInputs,
   enableLoginPageInputs,
   getLoginPageInputsEnabled,
 } from "../../../states/login";
+import { showModal } from "../../../states/modals";
 import {
   showErrorNotification,
   showNoticeNotification,
@@ -20,6 +20,7 @@ import {
 import { Button } from "../../common/Button";
 import { H3 } from "../../common/Headers";
 import { Separator } from "../../common/Separator";
+import ForgotPassword from "../../modals/ForgotPasswordModal";
 import { Checkbox } from "../../ui/form/Checkbox";
 import { InputField } from "../../ui/form/InputField";
 import { SubmitButton } from "../../ui/form/SubmitButton";
@@ -147,9 +148,10 @@ export function Login(): JSXElement {
         text="forgot password?"
         variant="text"
         class="text justify-end text-xs"
-        onClick={() => ForgotPasswordModal.show()}
+        onClick={() => showModal("ForgotPassword")}
         disabled={!getLoginPageInputsEnabled()}
       />
+      <ForgotPassword />
     </div>
   );
 }
