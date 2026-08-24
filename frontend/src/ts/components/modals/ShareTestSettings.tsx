@@ -103,6 +103,7 @@ export function ShareTestSettings(): JSXElement {
           onChange: ({ value }) => {
             if (!value) {
               form.setFieldValue("mode2", false);
+              form.setFieldValue("customText", false);
             }
           },
         }}
